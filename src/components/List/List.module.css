@@ -1,0 +1,21 @@
+.meta {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: var(--spaceS);
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spaceS);
+  padding: var(--spaceL) 0;
+  font-size: var(--fontSizeBodyM);
+  font-weight: var(--fontWeightRegular);
+  border-top: 1px solid var(--colorTextExtraLight);
+  color: var(--colorTextLight);
+
+  &:last-child {
+    border-bottom: 1px solid transparent !important;
+  }
+}

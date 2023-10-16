@@ -1,0 +1,5 @@
+.section {
+  margin-left: var(--spaceOuter);
+  margin-right: var(--spaceOuter);
+  direction: column;
+}

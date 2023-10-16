@@ -1,0 +1,48 @@
+.header {
+  position: fixed;
+  padding: var(--spaceL) var(--spaceOuter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: var(--zIndex5);
+  transition: var(--backgroundChangeTransitionXS);
+
+  @media (--mediaMobile) {
+    backdrop-filter: blur(100px);
+    background: calc(var(--rgbBackground) / 0.9);
+  }
+}
+
+.logo {
+  & .logoText {
+    text-decoration: none;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spaceL);
+
+  @media (--mediaMobile) {
+    display: none;
+  }
+
+  & .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: var(--spaceM);
+
+    & .buttonText {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spaceS);
+    }
+  }
+}

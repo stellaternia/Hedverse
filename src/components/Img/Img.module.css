@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  transition: scale var(--durationS) var(--bezierFastoutSlowin);
+  &[data-rounded='true'] {
+    border-radius: var(--borderRadius2);
+  }
+}

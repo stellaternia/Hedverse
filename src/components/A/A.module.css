@@ -1,0 +1,79 @@
+.normal,
+.active {
+  text-decoration: none;
+  font-size: var(--fontSizeBodyS);
+  transition: transform var(--durationM) var(--bezierFastoutSlowin),
+    var(--colorChangeTransitionXS);
+    color: var(--rgbAccent);
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.5px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--rgbAccent);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  &[data-type='hamburger'] {
+    font-weight: var(--fontWeightMedium);
+    font-size: var(--fontSizeH4);
+  }
+}
+
+.normal {
+  color: var(--colorTextTitle);
+}
+
+.active {
+  color: var(--colorTextTitle);
+
+  &[data-type='hamburger'] {
+    font-size: var(--fontSizeH4);
+    color: var(--rgbAccent);
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spaceXS);
+}
+
+.link {
+  color: var(--rgbAccent);
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--rgbAccent);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}

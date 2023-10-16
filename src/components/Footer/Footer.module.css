@@ -1,0 +1,8 @@
+.footer {
+  padding: var(--space3XL) var(--space3XL);
+
+  @media (--mediaMobile) {
+    padding-left: var(--spaceL);
+    padding-right: var(--spaceL);
+  }
+}

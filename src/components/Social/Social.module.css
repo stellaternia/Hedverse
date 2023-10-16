@@ -1,0 +1,27 @@
+.container {
+  gap: var(--spaceL);
+}
+
+.heading {
+  transition: color 0.3 var(--bezierFastoutSlowin);
+
+  & :hover {
+    & .icon {
+      transition: color 0.3 var(--bezierFastoutSlowin);
+      color: var(--rgbAccent);
+    }
+  }
+}
+
+.social {
+  padding: calc(var(--spaceS) + 0.3rem);
+  border-radius: var(--borderRadius4);
+  background-color: var(--rgbPrimary);
+  color: var(--rgbWhite);
+  font-size: var(--fontSizeH5);
+  transition: var(--backgroundChangeTransitionXS), scale var(--durationL);
+
+  &:hover {
+    scale: 0.9;
+  }
+}

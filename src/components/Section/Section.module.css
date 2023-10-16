@@ -1,0 +1,38 @@
+.section {
+  display: flex;
+
+  &:focus {
+    outline: none;
+  }
+
+  &[data-direction='column'] {
+    flex-direction: column;
+  }
+
+  &[data-direction='reverse'] {
+    flex-direction: row-reverse;
+  }
+
+  &[data-fullscreen='true'] {
+    max-width: var(--viewPortWidth);
+    height: var(--viewPortHeight);
+  }
+
+  &[data-align='center'] {
+    align-items: center;
+  }
+
+  &[data-justify='center'] {
+    justify-content: center;
+  }
+
+  &[data-justify='sb'] {
+    justify-content: space-between;
+  }
+
+  @media (--mediaTablet) {
+    &[data-direction='reverse'] {
+      flex-direction: column;
+    }
+  }
+}
